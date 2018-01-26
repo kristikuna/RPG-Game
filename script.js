@@ -1,10 +1,15 @@
 var play = prompt("Do you want to play?");
-var userName = prompt("What is your name?");
 var userHealth = 40;
 var grantHealth = 10;
 var userWins = 0;
 var grantWins = 0;
 
+if (play.toLowerCase() === "yes"){
+  var userName = prompt("What is your name?");
+} else {
+  userWins = 4;
+  console.log("GAME OVER");
+}
 
 while (userWins < 3 && grantWins <  1) {
  userHealth-= Math.floor(Math.random() * 2) + 1;
@@ -21,6 +26,6 @@ while (userWins < 3 && grantWins <  1) {
 
 if (userWins === 3) {
  console.log(userName + " Wins!");
-} else {
+} else if (grantWins === 1) {
  console.log("Grant Wins!");
 }
