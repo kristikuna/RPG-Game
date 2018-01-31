@@ -57,7 +57,9 @@ function startCombat() {
        if (player.healsRemaining > 0){
         player.health += player.heal();
         player.healsRemaining--;
-          console.log(player.name + " has healed and has " + player.health + " left!");
+        console.log(player.name + " has healed and has " + player.health + " left!");
+        player.health -= player.generateAttackDamage();
+        console.log(player.name + " gets hit after healing and has " + player.health + " left!")
         } else {
           console.log("Uh-Oh! You have used up all of your heals ):");
         }
