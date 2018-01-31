@@ -16,7 +16,7 @@ var player = {
 }
 
 var grant = {
-  name: "Grant the Almighty Chirpus",
+  name: "Grant the Almighty Chicken",
   health: 10,
 
   generateAttackDamage: function(){
@@ -48,8 +48,8 @@ function startCombat() {
      if (optionToFight.toLowerCase() === "attack") {
       player.health -= player.generateAttackDamage();
       grant.health -= grant.generateAttackDamage();
-        console.log(player.name + " has " + player.health + " left.");
-        console.log("Grant the Mighty Chicken has " + grant.health + " left.");
+        console.log(player.name + " has " + player.health + "  health left.");
+        console.log(grant.name + " " + grant.health+ " health left.");
       }
 
       //heal
