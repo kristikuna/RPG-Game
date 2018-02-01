@@ -42,7 +42,7 @@
   start.onclick = function() {
     startGame();
   }
-  
+
   function updateName(newMessage) {
     playerName.innerText = newMessage;
   }
@@ -72,13 +72,15 @@
       updateDisplay();
       updateDisplay();
       updateMessage(player.name + " has " + player.health + "  health left. " + grant.name + " " + grant.health + " health left.");
-      if (grant.health <= 0) {
+      if (player.wins === 5) {
+        updateMessage("YASSSSS, " + player.name + " wins!");
+       } else if (grant.health <= 0) {
         player.wins++;
         updateMessage("You have beat Grant! You need to win " + (5 - player.wins) + " more rounds.");
         grant.health = 10;
-      }  else if (player.wins === 5) {
-          console.log("winner");
-          updateMessage("YASSSSS, " + player.name + " wins!");
+      }
+          
+    
     }
 
     function updateDisplay() {
@@ -106,5 +108,5 @@
       updateMessage("You quit! Grant the Mighty Chicken has won!");
     }
   }
-}
+
 })();
