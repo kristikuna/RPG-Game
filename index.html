@@ -1,13 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>JavaScript Lab</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
 
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>JS GAME</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <script type="text/javascript" src="script.js"></script>
-  </body>
+<body>
+  <div class="startcontainer">
+    <button type="button" id="startButton">Start</button>
+  </div>
+
+  <div class="hide" id="mainGame">
+    <div class="attack_heal_quit">
+      <button type="button" id="attackButton">Attack</button>
+      <button type="button" id="healButton">Heal</button>
+      <button type="button" id="quitButton">Quit</button>
+    </div>
+
+
+    <p id="messageEl"></p>
+
+    <!-- player -->
+    <div class="statsInfo">
+
+
+      <h2>Player Stats</h2>
+
+      <div class="titles">
+        <p>Name: </p>
+        <p id="playerName"></p>
+        <p>Health:</p>
+        <p>Heal Count:</p>
+        <p>Wins:</p>
+      </div>
+
+      <div class="progressBar">
+          <progress id="playerHealthBar" value="40" max="40"></progress>
+          <progress id="playerHealCount" value="2" max="2"></progress>
+          <progress id="playerWins" value="0" max="5"></progress>
+      </div>
+
+
+      <!-- Grant -->
+      <h2>Enemy Stats</h2>
+
+      <div class="title2">
+        <p>Name: Grant</p>
+        <p>Health:</p>
+      </div>
+
+
+      <div class="progressBar2">
+        <progress id="grantHealthBar" value="10" max="10"></progress>
+      </div>
+
+    </div>
+  </div>
+  </div>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
 </html>

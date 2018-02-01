@@ -1,5 +1,59 @@
 body {
-  background-image: url("http://i.imgur.com/wUNsNFR.gif");
-  background-repeat: no-repeat;
-  background-position: center top;
+  background-color: lightblue;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+button {
+  background-color: teal;
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  padding: 20px;
+  border: 2px solid black;
+  margin-bottom: 20px;
+}
+
+#messageEl{
+  margin-bottom: 20px;
+}
+
+.progressBar {
+  text-align: right;
+  padding-right: 65px;
+
+}
+.progressBar2{
+  text-align: right;
+  padding-right: 130px;
+  padding-bottom: 30px;
+}
+
+.statsInfo {
+  border: 2px solid black;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.titles {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.title2 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.hide {
+  display: none;
+}
+
+.hideStart {
+  display: none;
+}
+
+#playerName {
+  display: inline-block;
 }
